@@ -46,18 +46,18 @@ export default function FiveChart({ value }: Props) {
       </div>
       <svg
         ref={svgRef}
-        viewBox="0 0 375 375"
-        width={375}
-        height={375}
+        viewBox="0 0 562.5 562.5"
+        width={562.5}
+        height={562.5}
         className="mx-auto block"
         style={{ background: 'transparent', marginTop: 0 }}
       >
         {/* ガイド円 */}
-        <circle cx={187.5} cy={187.5} r={93.75} stroke="#888" fill="none" strokeWidth={1.5} />
+        <circle cx={281.25} cy={281.25} r={140.625} stroke="#888" fill="none" strokeWidth={2.25} />
         {fiveElements.map(({ label, value, color, angleDeg, level }) => {
            const rad = (angleDeg * Math.PI) / 180;
-           const cx = 187.5 + 93.75 * Math.sin(rad);
-           const cy = 187.5 - 93.75 * Math.cos(rad);
+           const cx = 281.25 + 140.625 * Math.sin(rad);
+           const cy = 281.25 - 140.625 * Math.cos(rad);
            const minR = 9;
            const scale = 4.5;
            const r = value > 0 ? minR + value * scale : 0;
