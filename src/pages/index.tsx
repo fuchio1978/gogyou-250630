@@ -5,6 +5,8 @@ import FiveChart from "../components/FiveChart";
 import { useState } from "react";
 import { FiveElementInput, defaultValues } from "../lib/calc";
 
+import ColorSampleTable from '../components/ColorSampleTable';
+
 export default function Home() {
   const [forms, setForms] = useState<FiveElementInput[]>([
     { ...defaultValues },
@@ -40,5 +42,9 @@ export default function Home() {
         ))}
       </div>
     </main>
+    {/* 色見本を右下に固定表示 */}
+    <div className="fixed right-6 bottom-6 z-50 bg-white/90 rounded-lg shadow-lg p-3">
+      <ColorSampleTable />
+    </div>
   );
 }
