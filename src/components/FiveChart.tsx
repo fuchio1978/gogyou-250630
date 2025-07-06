@@ -28,7 +28,7 @@ export default function FiveChart({ value }: Props) {
       <div className="flex justify-end w-full gap-4 mb-2">
         <button
           aria-label="Copy as image"
-          className="btn btn-sm btn-circle"
+          className="hidden md:inline-flex btn btn-sm btn-circle"
           onClick={async () => {
             if (svgRef.current) {
               try {
@@ -42,7 +42,7 @@ export default function FiveChart({ value }: Props) {
         >
           Copy
         </button>
-
+        <span className="block md:hidden text-xs text-gray-400">※コピーはPCのみ対応</span>
       </div>
       <svg
         ref={svgRef}
