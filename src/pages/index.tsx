@@ -16,12 +16,12 @@ export default function Home() {
 
   return (
     <>
-      <main className="min-h-screen p-8 bg-gray-100">
+      <main className="min-h-screen p-8 bg-white md:bg-gray-100">
         <div className="w-full flex flex-col items-center">
           <h1 className="text-3xl font-bold mb-8 text-red-500">五行バランス表</h1>
-          <div className="scale-[.80] origin-top w-full flex flex-row justify-center gap-8">
+          <div className="w-full flex flex-col md:flex-row justify-center gap-8 scale-100 md:scale-[.80] origin-top">
             {forms.map((form, idx) => (
-              <div key={idx} className="bg-white rounded shadow p-4 flex flex-col items-center w-[390px] flex-shrink-0 border">
+              <div key={idx} className="bg-white rounded shadow p-4 flex flex-col items-center w-full max-w-[390px] flex-shrink-0 border mx-auto">
                 <h2 className="font-bold text-base mb-2">No.{idx + 1}</h2>
                 <div className="mt-4">
                   <FiveChart value={form} />
