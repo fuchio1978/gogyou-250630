@@ -44,7 +44,7 @@ export default function Home() {
         </div>
       </main>
       {/* 色見本を右下に固定表示 */}
-      <div className="fixed right-6 bottom-6 z-50 bg-white/90 rounded-lg shadow-lg p-3">
+      <div className="fixed right-4 bottom-4 z-50 bg-white/90 rounded-lg shadow-lg p-1 scale-90 md:scale-75" style={{minWidth: 0, minHeight: 0}}>
         <ColorSampleTable />
       </div>
     </>
